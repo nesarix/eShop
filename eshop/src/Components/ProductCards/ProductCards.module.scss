@@ -1,0 +1,17 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 20px;
+	text-align: center;
+	background-color: #8ba9a4;
+	box-shadow: 5px 10px #497b6b;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 40px;
+}

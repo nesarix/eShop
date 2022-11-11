@@ -1,0 +1,19 @@
+.produce__holder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+}
+.quantity__holder {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 10px;
+}
+.size {
+	font-size: 40px;
+	padding: 0px 10px;
+	border-radius: 8px;
+	border: 1px solid #495c44;
+	margin: 0px 5px;
+}

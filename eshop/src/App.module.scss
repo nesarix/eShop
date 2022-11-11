@@ -1,0 +1,16 @@
+@font-face {
+	font-family: Tangerine;
+	src: url("../src/resources/partials/fonts/Tangerine-Regular.ttf");
+}
+
+* {
+	color: #495c44;
+	text-decoration: none;
+	background-color: #cacbd6;
+	font-family: Tangerine;
+}
+img {
+	width: 250px;
+	height: 300px;
+	border-radius: 10px;
+}

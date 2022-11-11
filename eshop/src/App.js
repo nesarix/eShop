@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Components/Home/Home";
+import Nav from "./Components/Nav/Nav";
+import Produce from "./Components/Produce/Produce";
+import { getMushies } from "./Services/Mushies";
+import styles from "./App.module.scss";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [fungi, setFungi] = useState([]);
+	useEffect(() => {
+		getMushies().then((fungiData) => setFungi(fungiData));
+	}, []);
+
+	return (
+		<BrowserRouter>
+			<Nav />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/:Produce" element={<Produce />} />
+			</Routes>
+		</BrowserRouter>
+	);
 }
 
 export default App;
